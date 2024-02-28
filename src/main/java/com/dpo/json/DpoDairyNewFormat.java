@@ -28,6 +28,7 @@ public class DpoDairyNewFormat {
 	private String cowFaZyanCode;
 	private String cowMaZyanCode;
 	private long farmId;
+	private long breedId;
 	private String breedCode;
 	private String breedName;
 	private String breedIdString;
@@ -40,6 +41,7 @@ public class DpoDairyNewFormat {
 		json.setCowFaZyanCode(cow.getCowFaZyanCode());
 		json.setCowMaZyanCode(cow.getCowMaZyanCode());
 		json.setFarmId(cow.getTbdFarm().getFarmId());
+		json.setBreedId(cow.getTbdBreed().getBreedId());
 		json.setBreedCode(cow.getTbdBreed().getBreedCode());
 		json.setBreedName(cow.getTbdBreed().getBreedName());
 		json.setBreedIdString(cow.getTbdBreed().getBreedIdString());

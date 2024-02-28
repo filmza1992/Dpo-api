@@ -19,15 +19,13 @@ public class CowController {
 	@Autowired
 	CowBusiness cowBusiness;
 
-    @GetMapping("/hello")
-	public String getHello() {
-		return "Hello fim";
-	}
+	
 	@GetMapping("/all_list")
 	public ResponseEntity<List<DpoDairyNewFormat>> getListCowByMember() {
 		return ResponseEntity.ok(cowBusiness.getListCow());
 	}
 
+	
 	@GetMapping("/{id}")
 	public ResponseEntity<DpoDairyNewFormat> getCow(@PathVariable long id){
 		return ResponseEntity.ok(cowBusiness.getCowById(id));
