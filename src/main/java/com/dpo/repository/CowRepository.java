@@ -10,5 +10,5 @@ import com.dpo.model.TbdCow;
 public interface CowRepository extends JpaRepository<TbdCow,Long>{
     TbdCow findByCowId(long id);
 
-    List<TbdCow> findTop10000By();
+    List<TbdCow> findTop20000By();
 }
