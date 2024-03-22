@@ -15,9 +15,12 @@ public class CowService {
 	CowRepository CowRepository;
     
     public List<TbdCow> getListCow(){
-        return CowRepository.findTop10000By();
+        return CowRepository.findAll();
     }
     
+    public List<TbdCow> getListCowTopBy(){
+        return CowRepository.findTop20000By();
+    }
     public TbdCow getCow(long id){
         return CowRepository.findByCowId(id);
     }

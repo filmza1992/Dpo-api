@@ -19,10 +19,14 @@ public class CowBusiness {
     public List<DpoDairyNewFormat> getListCow() {
         List<TbdCow> cowList = cowService.getListCow();
         
+        return DpoDairyNewFormat.packJsons(cowList);
+    }
+    public List<DpoDairyNewFormat> getListCowTopBy(){
+        List<TbdCow> cowList = cowService.getListCowTopBy();
+        
         
         return DpoDairyNewFormat.packJsons(cowList);
     }
-
     // public List<DpoDairyNewFormat> getListCow() {
     //     List<TbdCow> cowList = new ArrayList<>();
     //     for(int i = 0 ; i < 951 ; i++){ 
