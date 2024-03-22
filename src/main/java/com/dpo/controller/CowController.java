@@ -21,10 +21,14 @@ public class CowController {
 
 	
 	@GetMapping("/all_list")
-	public ResponseEntity<List<DpoDairyNewFormat>> getListCowByMember() {
+	public ResponseEntity<List<DpoDairyNewFormat>> getListCow() {
 		return ResponseEntity.ok(cowBusiness.getListCow());
 	}
 
+	@GetMapping("/top_10000")
+	public ResponseEntity<List<DpoDairyNewFormat>> getListCowByTop() {
+		return ResponseEntity.ok(cowBusiness.getListCowTopBy());
+	}
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<DpoDairyNewFormat> getCow(@PathVariable long id){
